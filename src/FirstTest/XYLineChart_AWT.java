@@ -31,6 +31,10 @@ import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.data.xy.XYSeriesCollection; 
 import org.jfree.chart.renderer.xy.XYLineAndShapeRenderer;
 
+/**
+ * Create the graph
+ *
+ */
 public class XYLineChart_AWT extends ApplicationFrame {
 	
 	  File file;
@@ -73,6 +77,9 @@ public class XYLineChart_AWT extends ApplicationFrame {
 	   return chartPanel;
    }
     
+    /*
+     * Create the data set
+     */
    private XYDataset createDataset(double a)
    {
 	   
