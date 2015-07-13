@@ -14,6 +14,7 @@ import org.jfree.ui.RefineryUtilities;
 
 import java.awt.*;
 import java.io.File;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.sql.ResultSet;
 import java.util.ArrayList;
@@ -42,8 +43,20 @@ public class main {
 	    	  
 	    	  Frame f = new Frame();
 
-		
+		// Test input file :
+	    	  
+	    	  try {
+	    
+				ReadFileTxt read = new ReadFileTxt("input.txt");
+				read.getInt();
+			} catch (FileNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+	    	  
 
+	    	  
+	    	 
 		
 	}
 	
