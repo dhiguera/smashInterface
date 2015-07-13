@@ -21,9 +21,11 @@ public class ReadFileTxt {
 
 		 input = new Scanner(new File(fileName));
 	
-	
 	}
 
+	/**
+	 * Test function
+	 */
 	public void getInt(){
 		
 		while(input.hasNextInt()){

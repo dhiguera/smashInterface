@@ -43,16 +43,9 @@ public class main {
 	    	  
 	    	  Frame f = new Frame();
 
-		// Test input file :
 	    	  
-	    	  try {
-	    
-				ReadFileTxt read = new ReadFileTxt("input.txt");
-				read.getInt();
-			} catch (FileNotFoundException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+	    	  
+		
 	    	  
 
 	    	  
