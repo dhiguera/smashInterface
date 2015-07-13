@@ -24,7 +24,7 @@ public class ReadFileTxt {
 	}
 
 	/**
-	 * Test function
+	 * Test function: Print in the concole the numbers in the txt file
 	 */
 	public void getInt(){
 		

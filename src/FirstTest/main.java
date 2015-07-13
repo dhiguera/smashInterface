@@ -40,7 +40,8 @@ public class main {
 
 
 	public static void main(String[] args) throws BiffException{
-	    	  
+	    	 
+		// Test comment
 	    	  Frame f = new Frame();
 
 	    	  
