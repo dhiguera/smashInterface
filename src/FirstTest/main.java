@@ -27,6 +27,7 @@ import org.jfree.data.xy.XYSeriesCollection;
 import org.jfree.chart.renderer.xy.XYLineAndShapeRenderer;
 
 // created by David and Jeremie 
+//13/07/2015 NASA Ames
 public class main {
 
 
