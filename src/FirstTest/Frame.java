@@ -1,3 +1,7 @@
+/**
+ * Frame create the main Frame with all the labels, textfields, buttons, info panel and graph.
+ * 
+ */
 package FirstTest;
 
 import java.awt.*;
@@ -17,6 +21,7 @@ import org.jfree.chart.JFreeChart;
 
 public class Frame implements ActionListener {
 
+	// Initialization of all variables
 	double a;
 	private JLabel label1;
 	private JLabel label2;
@@ -42,6 +47,10 @@ public class Frame implements ActionListener {
 	JTextField saveText;
 	JButton saveButton;
 	
+	
+	/*
+	 * Example of input data for the info panel
+	 */
 	int i=0;
 	double data[][]=
 		 {{ 1, 3, 6, 2, 9, 5, 4, 7, 0, 8 },
@@ -54,7 +63,6 @@ public class Frame implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent evt2) {
         	textfield3.setText(getDate());
-        	
         	textfield4.setText(String.valueOf(data[0][i]));
         	textfield5.setText(String.valueOf(data[1][i]));
         	textfield6.setText(String.valueOf(data[2][i]));
@@ -67,6 +75,9 @@ public class Frame implements ActionListener {
         }
     });
 
+	/*
+	 * Frame Constructor
+	 */
 	public Frame() {
 
 		// Frame
@@ -102,7 +113,7 @@ public class Frame implements ActionListener {
 		this.createPanels(); // create the panels
 
 		// Add into the frame
-		f.add(pan1a2);
+		f.add(pan1a2); // panel with graph and Calculate panel
 		f.add(pan3);
 		f.pack();
 		
@@ -114,18 +125,31 @@ public class Frame implements ActionListener {
 
 	}
 
+	/*
+	 * return the current date
+	 */
 	public String getDate() {
 		DateFormat dateFormat = new SimpleDateFormat("HH:mm:ss  MM/dd/yy");
 		Date date = new Date();
 		return dateFormat.format(date);
 	}
 
+	/*
+	 * Add to the textfield "NOW"
+	 */
 	private void setInfo() {
 		
 	    	  textfield3.setText(getDate());  
 		
 	}
 
+	/*
+	 * create all the panels: calculate, graph, info  & save
+	 * pan1=calculate panel 
+	 * pan2=graph panel
+	 * pan3= info + savepanel
+	 * pan1a2 = pan1 + pan2
+	 */
 	private void createPanels() {
 		this.createPanelInfo(); // create the panel with the info (voltage,...)
 
@@ -149,6 +173,9 @@ public class Frame implements ActionListener {
 		pan3.add(savePanel);
 	}
 
+	/*
+	 * create the info panel
+	 */
 	private void createPanelInfo() {
 		JLabel label3 = new JLabel("TIME");
 		JLabel label4 = new JLabel("CONTROL");
@@ -197,6 +224,10 @@ public class Frame implements ActionListener {
 
 	}
 
+	/*
+	 * Open a Excel file 
+	 * do not work for the moment
+	 */
 	public ArrayList<String> openExcel(String inputFile)
 			throws IOException {
 
@@ -233,8 +264,14 @@ public class Frame implements ActionListener {
 		return resultSet;
 	}
 
+	
+	/*
+	 * Create the action when the button is pushed
+	 * @evt: the event created when the button is pushed
+	 */
 	public void actionPerformed(ActionEvent evt) {
 
+		// if the button "Calculate" is pushed
 		if (evt.getSource() == but) {
 
 			pan.remove(chartPanel);
@@ -250,6 +287,8 @@ public class Frame implements ActionListener {
 
 		}
 
+
+		// if the button "Save" is pushed
 		if (evt.getSource() == saveButton) {
 
 			// if the file name doesnt exist

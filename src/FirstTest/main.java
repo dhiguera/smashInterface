@@ -1,3 +1,12 @@
+/**
+ * author: David Higuera & Jeremie Meurisse 
+ * davidh.aero@gmail.com & jeremie.meurisse@gmail.com
+ * 
+ * NASA Ames Research Center
+ * Smash Project
+ * 13/07/2015
+ * 
+ */
 package FirstTest;
 import javax.swing.* ;
 
@@ -26,8 +35,6 @@ import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.data.xy.XYSeriesCollection; 
 import org.jfree.chart.renderer.xy.XYLineAndShapeRenderer;
 
-// created by David and Jeremie 
-//13/07/2015 NASA Ames
 public class main {
 
 
